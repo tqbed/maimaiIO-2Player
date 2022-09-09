@@ -7,7 +7,7 @@
 #define BOUNCE_INTERVAL 5
 
 int buttonPin[] = {2,3,4,5,6,7,8,9,10};
-char buttonKey[] = {'q','w','e','d','c','x','z','a','s'};
+int buttonKey[] = {'341','342','343','346','351','350','347','344','3'};
 Bounce buttonBounce[TOTAL_BUTTON_COUNT];
 bool buttonState[TOTAL_BUTTON_COUNT];
 bool previousState[TOTAL_BUTTON_COUNT];
@@ -23,7 +23,7 @@ void setup() {
   }
   
  for (int i = BUTTON_COUNT; i < TOTAL_BUTTON_COUNT; i++){
-   buttonBounce[i] = Bounce();
+   buttocharnBounce[i] = Bounce();
    buttonBounce[i].attach(buttonPin[i], INPUT_PULLUP);
    buttonBounce[i].interval(BOUNCE_INTERVAL);
    buttonState[i] = false;
